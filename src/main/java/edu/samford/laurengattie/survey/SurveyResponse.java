@@ -10,5 +10,15 @@ package edu.samford.laurengattie.survey;
  * @author laurengattie
  */
 public class SurveyResponse {
+
+    //Attributes
+    protected Answer[] answers;
+    protected int numAnswers;
+    
+    public SurveyResponse(int size) {
+        this.numAnswers = 0;
+        this.answers = new Answer[size];
+        
+    }
     
 }

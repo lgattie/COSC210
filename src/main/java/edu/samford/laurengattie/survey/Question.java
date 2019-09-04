@@ -30,7 +30,8 @@ public class Question {
     
     public Question(String prompt) {
         this();
-        //Goes up and calls what is being intialized
+        //Goes up and calls what is being intialized (ie the default contructor that takes no parameters
+        //any time you see the () you are calling a method
         this.prompt = prompt;
         
     }
@@ -68,4 +69,13 @@ public class Question {
             // difference between this and private has to do with classes extending to other classes 
             // private is a dead end 
     
+    /**
+     * Returns true if the given response is within the range. 
+     * @param scaleResponse
+     * @return 
+     */
+    public boolean checkResponse (int scaleResponse){
+        return scaleResponse >=minScale && scaleResponse <= maxScale;
+        
+    }
 }
