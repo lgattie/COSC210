@@ -1,0 +1,9 @@
+5|I worked with NetBeans last semester in COSC 110, and I know some of the basic shortcuts/syntax. However, there are still a lot of things I don't know.
+4|I understand how to create each of those. I also understand the importance of correctly assigning attributes to them, but sometimes I get confused on the appropriate time to use each of them.
+4|I understand main methods well and how to incorporate additional methods into the main method, but I still struggle to decide when to create a method to do something and when to just leave it in the main method.
+5|I understand the different types of logical statements and creating the parameters for each of them.
+5|I struggle with deciding which one to use in each scenario, but I know how each of them work individually.
+3|I understand the basic concept behind them, but utilizing them in a program is still very hard for me to conceptualize.
+1|I don't really even know what that means.
+2|
+4|I am more comfortable designing and testing the programs, but the actual coding and debugging is tricky for me if the program is not working out as I planned.
