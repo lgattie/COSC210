@@ -36,6 +36,9 @@ public class SurveyResults {
         File dir = new File(path);
         File files[] = dir.listFiles();
         for (File file : files) {
+            // unsual looking for loop fore tab, stands for for each, 
+            // use this when you want to do something to each item in the data structure
+            // iterate through the list of inforamtion
             if (file.isFile()) {   // couldnt use fore loop if you are going to rearrange the order of the files, 
                 // or if you need the position of the file in the array at all
                 Scanner filein = new Scanner(file);
@@ -45,7 +48,7 @@ public class SurveyResults {
                 while (filein.hasNextLine()) {
                     String line = filein.nextLine();
                     String parts[] = line.split("\\|");
-                    if (parts.length!=2){
+                    if (parts.length != 2) {
                         continue;
                     }
                     int scaleResponse = Integer.parseInt(parts[0]);
@@ -70,22 +73,23 @@ public class SurveyResults {
         double totals[] = new double[survey.numQuestions];
         double averages[] = new double[survey.numQuestions];
         String comments[] = new String[survey.numQuestions];
-        
-        for(SurveyResponse response : responses){
-            if (response!=null)
-            for (int qi = 0; qi < response.numAnswers; qi++) {
-                totals[qi] += response.answers[qi].scaleResponse;
-                comments[qi] += "|" + response.answers[qi].additionalResponse;
-                
+
+        for (SurveyResponse response : responses) {
+            if (response != null) {
+                for (int qi = 0; qi < response.numAnswers; qi++) {
+                    totals[qi] += response.answers[qi].scaleResponse;
+                    comments[qi] += "|" + response.answers[qi].additionalResponse;
+
+                }
             }
         }
         // Calculate the averages by dividing all totals by the number of responses.
-        for(int ti=0; ti<totals.length; ti++){
+        for (int ti = 0; ti < totals.length; ti++) {
             totals[ti] = totals[ti] / numResponses;
-            
+
         }
-        
-        for (int qi=0; qi<survey.numQuestions; qi++){
+
+        for (int qi = 0; qi < survey.numQuestions; qi++) {
             Question q = survey.questions[qi];
             System.out.println(q.prompt + " - " + totals[qi] + " - " + comments[qi]);
         }

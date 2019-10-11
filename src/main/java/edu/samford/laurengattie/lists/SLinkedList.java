@@ -34,7 +34,7 @@ public class SLinkedList<T> {
         // Update the head to reference the newly "added" node
         head = newnode;
 
-        // Lastly, do something with thte tail, only if the link has only one item in the list
+        // Lastly, do something with the tail, only if the link has only one item in the list
         if (size == 1) {
             tail = newnode;
         }
@@ -98,7 +98,6 @@ public class SLinkedList<T> {
      * @param
      * @return the SNode containing the searchdata or null if not found.
      */
-
     public SNode<T> find(T searchdata) {
         SNode<T> cur = head;
         while (cur != null) {
@@ -109,19 +108,21 @@ public class SLinkedList<T> {
         }
         return null;
     }
-/**
- * Finds and removes the FIRST occurrence of the given data.
- * @param searchdata
- * @return the removed node if found otherwise null
- */
-    public SNode<T> remove(T searchdata){
+
+    /**
+     * Finds and removes the FIRST occurrence of the given data.
+     *
+     * @param searchdata
+     * @return the removed node if found otherwise null
+     */
+    public SNode<T> remove(T searchdata) {
         SNode<T> doomed = find(searchdata);
-        if (doomed!=null){
+        if (doomed != null) {
             remove(doomed);
         }
         return doomed;
     }
-            
+
     public int size() {
         return size;
     }

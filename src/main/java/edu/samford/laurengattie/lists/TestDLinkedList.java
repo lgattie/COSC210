@@ -6,6 +6,7 @@
 package edu.samford.laurengattie.lists;
 
 import java.util.ArrayList;
+
 /**
  *
  * @author laurengattie
@@ -16,7 +17,7 @@ public class TestDLinkedList {
         DLinkedList<String> list = new DLinkedList<>();
         DLinkedList<Integer> ratings = new DLinkedList<>();
         ArrayList<Double> area = new ArrayList<>();
-        
+
         //test empty list
         System.out.println("size==O:                       " + list.size());
         System.out.println("toString==' ':                 " + list.toString());
@@ -24,16 +25,16 @@ public class TestDLinkedList {
         System.out.println("toString==' ':                 " + ratings.toString());
         System.out.println("size==O:                       " + area.size());
         System.out.println("toString==' ':                 " + area.toString());
-        
+
         //test a one item list
         //we need a starting time and an ending time -- basically a stopwatch
         long starttime = System.nanoTime();
         list.insertFirst("BHM");
         long finishtime = System.nanoTime();
-        System.out.println("insertFirst - one item list - "+ (finishtime-starttime));
-       
+        System.out.println("insertFirst - one item list - " + (finishtime - starttime));
+
         ratings.insertFirst(10);
-        area.add(0,3.2);
+        area.add(0, 3.2);
         System.out.println("size==1:                       " + list.size());
         System.out.println("toString=='BHM':               " + list.toString());
         System.out.println("size==1:                       " + ratings.size());

@@ -10,27 +10,26 @@ package edu.samford.laurengattie.text;
  * @author laurengattie
  */
 public class TextBarChart {
+
     // Attributes
     protected String labels[];
-              // alternative way of writing this: protected String[] labels;
+    // alternative way of writing this: protected String[] labels;
     protected double values[];
     protected int numrows;
-    
+
     // Constructor
-    
-    /** 
+    /**
      * Displays the chart using the populated labels and values.
      */
     public void display() {
-        
+
     }
-    
+
     /**
      * Add the label/value combo to our attributes.
      */
-    
-    public void addRow (String label, float value){
-        labels [numrows] = label;
-        values [numrows++] = value;
+    public void addRow(String label, float value) {
+        labels[numrows] = label;
+        values[numrows++] = value;
     }
 }
