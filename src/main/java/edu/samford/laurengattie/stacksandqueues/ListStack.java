@@ -51,4 +51,9 @@ public class ListStack<T> implements Stack<T> {
         return theStack.isEmpty();
     }
 
+    @Override
+    public String toString() {
+        return theStack.toString();
+    }
+
 }
