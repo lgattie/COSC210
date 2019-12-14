@@ -6,7 +6,7 @@ import edu.samford.laurengattie.lists.DLinkedList;
  *
  * @author laurengattie
  */
-public class ListQueue<T> implements Queue<T> {
+public class ListQueue<T extends Comparable> implements Queue<T> {
 
     protected DLinkedList<T> theQueue = new DLinkedList<>();
 

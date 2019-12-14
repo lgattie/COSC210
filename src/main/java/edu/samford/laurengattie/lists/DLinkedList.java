@@ -7,13 +7,14 @@ package edu.samford.laurengattie.lists;
 
 import java.util.Iterator;
 import java.util.function.Consumer;
+import static sun.management.snmp.jvminstr.JvmThreadInstanceEntryImpl.ThreadStateMap.Byte1.other;
 
 /**
  *
  * @author laurengattie
  */
 
-public class DLinkedList<T> implements Iterable<T> {
+public class DLinkedList<T extends Comparable> implements Iterable<T> {
     
     private DNode<T> header;   // "special" node without data that marks beginning of list
     private DNode<T> trailer;  // "special" node without data that marks end of list
@@ -142,10 +143,10 @@ public class DLinkedList<T> implements Iterable<T> {
     // returns the DNode<T> containing the data if found
     // returns null otherwise (if not found)
     // NOTE: stops searching after finding the first occurence
-    public DNode<T> search(String data) {
+    public DNode<T> search(T data) {
         DNode<T> cur = header.getNext();
         while(cur!=trailer) {
-            if(cur.element().equals(data)) {
+            if(cur.element().compareTo(data)==0) {
                 return cur; // we found a hit! return the current node
             }
             cur = cur.getNext();

@@ -12,10 +12,10 @@ import java.util.function.Consumer;
  *
  * @author laurengattie
  */
-public class DLinkedListIterator<T> implements Iterator<T> {
+public class DLinkedListIterator<T extends Comparable> implements Iterator<T> {
 
-    protected DLinkedList<T> theList;
-    protected DNode<T> cur;
+    protected DLinkedList<T> theList; // the list we are iterrating over
+    protected DNode<T> cur;     // keeps up with the current position
 
     public DLinkedListIterator(DLinkedList<T> theList) {
         this.theList = theList;

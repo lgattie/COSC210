@@ -11,7 +11,7 @@ import edu.samford.laurengattie.lists.DLinkedList;
  *
  * @author laurengattie
  */
-public class ListStack<T> implements Stack<T> {
+public class ListStack<T extends Comparable> implements Stack<T> {
 
     // Underlying data structure thst stores all the stack items
     // THe "end" of the linked list will be hte "top" of the stack
